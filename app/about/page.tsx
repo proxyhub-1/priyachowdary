@@ -7,6 +7,8 @@ import { profile } from "@/data/profile";
 
 export const metadata: Metadata = { title: "About" };
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export default function AboutPage() {
   return (
     <div className="page-width interior-page">
@@ -14,7 +16,7 @@ export default function AboutPage() {
       <div className="about-layout">
         <div className="about-aside">
           <div className="about-portrait">
-            <Image alt="Priya Jonnalagadda" fill sizes="(max-width: 760px) 90vw, 290px" src="/priya-jonnalagadda.jpg" unoptimized />
+            <Image alt="Priya Jonnalagadda" fill sizes="(max-width: 760px) 90vw, 290px" src={`${basePath}/priya-jonnalagadda.jpg`} unoptimized />
           </div>
           <p className="eyebrow">THE PERSON BEHIND THE WORK</p>
         </div>

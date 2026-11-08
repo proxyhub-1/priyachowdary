@@ -4,6 +4,8 @@ import Image from "next/image";
 import { motion, useReducedMotion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+
 export function HeroArt() {
   const reduceMotion = useReducedMotion();
 
@@ -22,7 +24,7 @@ export function HeroArt() {
           fill
           priority
           sizes="(max-width: 760px) 90vw, 40vw"
-          src="/priya-jonnalagadda.jpg"
+          src={`${basePath}/priya-jonnalagadda.jpg`}
           unoptimized
         />
       </div>
